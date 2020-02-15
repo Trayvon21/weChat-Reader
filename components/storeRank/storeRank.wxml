@@ -1,0 +1,7 @@
+<view class="title">{{title}}</view>
+<view class="mian-container">
+    <view class="box" wx:if="{{!item.collapse}}" wx:for="{{list}}" wx:key="index" bind:tap="goTo" data-title="{{item.title}}" data-id="{{item._id}}">
+            <image class="rank-icon" src="https://statics.zhuishushenqi.com{{item.cover}}" />
+            {{item.title}}
+    </view>
+</view>

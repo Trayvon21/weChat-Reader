@@ -1,0 +1,19 @@
+<view class="header flex jc-between">
+    <view bind:tap="changeEdit" class="">
+        <image wx:if="{{editFlag}}" class="header-icon" src="../../assets/images/checked.svg" />
+        <image wx:else class="header-icon" src="../../assets/images/edit.svg" />
+    </view>
+    <view class="flex">
+        <button class="header-btn t-align" bind:tap="goTo">帮助</button>
+        <image bind:tap="reload" class="header-icon" src="../../assets/images/reload.svg" />
+    </view>
+</view>
+<view wx:if="{{books.length>0}}" class="flex book-boxs">
+    <view class="books" wx:for="{{books}}" wx:key="index">
+        <icon wx:if="{{editFlag}}" bind:tap="del" data-id="{{item._id}}" class="del-icon" type="clear" size="23" color="" />
+        <view animation="{{animation}}">
+            <bookCase item="{{item}}"></bookCase>
+        </view>
+    </view>
+</view>
+<view wx:else class="">主人还没收藏书籍哦，请去书城收藏吧！</view>

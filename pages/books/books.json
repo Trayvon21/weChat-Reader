@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "bookBox":"../../components/common/bookBox/bookBox"
+  }
+}

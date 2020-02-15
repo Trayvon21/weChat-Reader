@@ -1,0 +1,22 @@
+.header-nav {
+    width: 50%;
+    height: 7vh;
+    line-height: 75rpx;
+    background: #f6f6f6;
+}
+
+.nav-actived {
+    display: inline-block;
+    color: red;
+    border-bottom: 5rpx solid red;
+}
+
+.nav-none {
+    display: inline-block;
+}
+
+.store-main {
+    height: 93vh;
+    overflow: hidden;
+    overflow-y: scroll;
+}

@@ -1,0 +1,30 @@
+.books-top {
+    position: fixed;
+    top:0;
+    width: 100%;
+    background: white;
+}
+.nav-box {
+    width: 100%;
+    border-bottom: 1rpx solid rgb(244, 244, 244);
+    overflow: hidden;
+    overflow-x: scroll;
+    white-space: nowrap;
+}
+
+.header-nav {
+    height: 80rpx;
+    line-height: 75rpx;
+    padding: 0 10rpx;
+    font-size: 30rpx;
+}
+
+.nav-actived {
+    color: red;
+}
+.box-height1{
+    margin-top: 160rpx;
+}
+.box-height2{
+    margin-top: 80rpx;
+}

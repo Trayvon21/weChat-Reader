@@ -1,0 +1,7 @@
+<view class="box" bind:tap="goToDetail">
+    <view class="">
+        <image class="pic" src="https://statics.zhuishushenqi.com{{item.cover}}"></image>
+    </view>
+    <view class="title">{{item.title}}</view>
+    <view class="readInfo">读到第{{item.readInfo+1}}章</view>
+</view>

@@ -1,0 +1,8 @@
+<view class="flex nav-box" wx:if="{{monthRank!==''}}">
+    <view bind:tap="clickNav" data-active="{{item}}" wx:for="{{navList}}" wx:key="index" class="header-nav t-center">
+        <view class="{{actived===item?'nav-actived':'nav-none'}}">{{item}}</view>
+    </view>
+</view>
+<view class="ranks-main {{monthRank===''?'full':''}}">
+    <bookBox wx:for="{{rankList}}" wx:key="index" bookData="{{item}}"></bookBox>
+</view>

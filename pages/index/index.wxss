@@ -1,0 +1,35 @@
+.header {
+    margin: 50rpx 30rpx;
+}
+
+.header-icon {
+    width: 40rpx;
+    height: 40rpx;
+    margin-top: 10rpx;
+    color: black;
+}
+
+.header-btn {
+    border-radius: 20rpx;
+    border: 1px solid gray;
+    height: 60rpx;
+    line-height: 60rpx;
+    white-space: nowrap;
+    font-size: 30rpx;
+    margin-right: 40rpx;
+}
+
+.book-boxs {
+    flex-wrap: wrap;
+}
+
+.books {
+    position: relative;
+}
+
+.del-icon {
+    z-index: 20;
+    position: absolute;
+    right: 30rpx;
+    top: 30rpx;
+}

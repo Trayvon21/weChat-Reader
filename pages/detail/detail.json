@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "shortReviews":"../../components/shortReviews/shortReviews",
+    "mp-actionSheet": "../../components/weui/actionsheet/actionsheet"
+  }
+}

@@ -1,0 +1,36 @@
+<import src="../../components/wxParse/wxParse.wxml" />
+<view wx:if="{{menuShow}}" class="menu-container">
+    <view class="menu-top flex jc-between">
+        <view class="menu-title">目录</view>
+        <view class="back" bind:tap="clickMenu">返回</view>
+    </view>
+    <view class="chapters">
+        <view class="chapter-each" data-set="{{index}}" bind:tap="changeChapter" wx:for="{{chapters}}" wx:key="index">
+            {{item.title}}
+        </view>
+    </view>
+</view>
+<view class="read-container" style="background:{{bgColor}}">
+    <view>
+        <view class="title">{{title}}</view>
+        <view class="desc" style="font-size:{{descSize}}rpx" bind:tap="showBottom">
+            <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+        </view>
+    </view>
+    <view class="btn-group flex" wx:if="{{chapters.length>1}}">
+        <button data-set="last" bind:tap="changeChapter" class="btn-left">上一章</button>
+        <button data-set="next" bind:tap="changeChapter" class="btn-right">下一章</button>
+    </view>
+    <view class="bottom">
+        <view wx:if="{{changeFlag}}" class="change-bg flex">
+            <view class="bg-title">换肤</view>
+            <view bind:tap="changeColor" data-color="{{item}}" class="setColor" wx:for="{{setColor}}" wx:key="index" style="background:{{item}}"></view>
+        </view>
+        <view wx:if="{{show}}" class="bottom-nav flex">
+            <view bind:tap="clickMenu">目录</view>
+            <view data-size='small' bind:tap="changeSize">Aa--</view>
+            <view data-size='big' bind:tap="changeSize">Aa++</view>
+            <view bind:tap="changeBg">背景</view>
+        </view>
+    </view>
+</view>

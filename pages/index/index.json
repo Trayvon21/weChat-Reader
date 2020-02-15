@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "bookCase":"../../components/bookCase/bookCase"
+  }
+}

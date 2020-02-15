@@ -1,0 +1,68 @@
+.search-group {
+    padding: 0 20rpx;
+    position: relative;
+}
+
+.keys-about {
+    padding: 0 20rpx;
+}
+
+.icon-search {
+    position: absolute;
+    top: 3.5vh;
+    left: 175rpx;
+    margin-top: -20rpx;
+}
+
+.icon-clear {
+    z-index: 10;
+    position: absolute;
+    top: 3.5vh;
+    margin-top: -20rpx;
+    right: 30rpx;
+}
+
+.search-box {
+    margin-top: 2vh;
+    margin-bottom: 1vh;
+    background-color: #ebebeb;
+    height: 7vh;
+    border-radius: 30rpx;
+}
+
+.search-pic {
+    z-index: 99;
+    width: 30rpx;
+    height: 30rpx;
+}
+
+.icon {
+    width: 30rpx;
+    height: 30rpx;
+}
+
+.icon-main {
+    color: #f99384;
+}
+
+.hotwords-box {
+    flex-wrap: wrap;
+}
+
+.hotwords {
+    margin: 5rpx 20rpx;
+    padding: 10rpx;
+    font-size: 30rpx;
+    /* border-radius: 10rpx; */
+    color: white;
+}
+
+.history {
+    margin: 20rpx;
+}
+
+.results {
+    overflow: hidden;
+    height: 90vh;
+    overflow-y: scroll;
+}

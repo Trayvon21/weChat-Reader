@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "bookBox":"../../components/common/bookBox/bookBox",
+    "mp-dialog": "../../components/weui/dialog/dialog"
+  }
+}

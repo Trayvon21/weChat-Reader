@@ -1,0 +1,46 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/bookStore/bookStore",
+        "pages/search/search",
+        "pages/help/help",
+        "pages/books/books",
+        "pages/ranks/ranks",
+        "pages/detail/detail",
+        "pages/read/read"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#c4192f",
+        "navigationBarTitleText": "长江阅读",
+        "navigationBarTextStyle": "white"
+    },
+    "tabBar": {
+        "color": "#8a8a8a",
+        "selectedColor": "#d81e06",
+        "backgroundColor": "white",
+        "position": "bottom",
+        "borderStyle": "black",
+        "list": [{
+                "pagePath": "pages/index/index",
+                "text": "书架",
+                "iconPath": "./assets/images/index.png",
+                "selectedIconPath": "./assets/images/index-active.png"
+            },
+            {
+                "pagePath": "pages/bookStore/bookStore",
+                "text": "书城",
+                "iconPath": "./assets/images/bookStore.png",
+                "selectedIconPath": "./assets/images/bookStore-active.png"
+            },
+            {
+                "pagePath": "pages/search/search",
+                "text": "搜索",
+                "iconPath": "./assets/images/search.png",
+                "selectedIconPath": "./assets/images/search-active.png"
+            }
+        ]
+    },
+
+    "sitemapLocation": "sitemap.json"
+}

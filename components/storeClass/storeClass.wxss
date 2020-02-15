@@ -1,0 +1,26 @@
+/* components/bookStore/storeClass/storeClass.wxss */
+.title {
+    margin-left: 30rpx;
+    line-height: 3;
+    color: gray;
+}
+.flex{
+    flex-wrap: wrap;
+}
+.box {
+    width: 248rpx;
+    text-align: center;
+    border: 1rpx solid rgb(244, 244, 244);
+    padding: 20rpx 0;
+}
+
+.book-name {
+    font-weight: 600;
+    line-height: 50rpx;
+    font-size: 36rpx;
+}
+
+.book-count {
+    font-size: 32rpx;
+    color: gray;
+}

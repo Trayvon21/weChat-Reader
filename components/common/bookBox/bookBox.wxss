@@ -1,0 +1,65 @@
+.box-container {
+    padding: 20rpx;
+    border-bottom: 1rpx solid rgb(244, 244, 244);
+}
+
+.img {
+    width: 200rpx;
+    height: 280rpx;
+}
+
+.left,
+.right {
+    padding: 20rpx;
+}
+
+.right {
+    width: 430rpx;
+}
+
+.title {
+    line-height: 60rpx;
+    font-size: 34rpx;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.author,
+.shortIntro,
+.tag {
+    font-size: 32rpx;
+    color: #8e8e8e;
+}
+
+.shortIntro {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.tags {
+    width: 430rpx;
+    overflow: hidden;
+    overflow-x: scroll;
+}
+
+.tags::-webkit-scrollbar {
+    display: none;
+}
+
+.tag {
+    color: white;
+    border-radius: 10rpx;
+    padding: 2rpx 5rpx;
+    margin: 10rpx;
+    white-space: nowrap;
+}
+
+.follower {
+    margin-top: 30rpx;
+    font-size: 30rpx;
+    color: #f86754;
+}

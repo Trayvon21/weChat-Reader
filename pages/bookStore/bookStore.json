@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "storeClass":"../../components/storeClass/storeClass",
+    "storeRank":"../../components/storeRank/storeRank"
+  }
+}

@@ -1,0 +1,18 @@
+.box {
+    width: 200rpx;
+    margin: 25rpx;
+}
+
+.pic {
+    width: 200rpx;
+    height: 300rpx;
+}
+
+.title {
+    font-size: 34rpx;
+}
+
+.readInfo {
+    font-size: 32rpx;
+    color: #878787;
+}

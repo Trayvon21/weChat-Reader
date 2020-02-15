@@ -1,0 +1,43 @@
+<view class="search-container">
+    <view class="search-group">
+        <input confirm-type="search" value='{{value}}' bindconfirm="searchGo" bindinput="input" class="search-box t-center" placeholder-class="search-placeholder t-center" type="text" placeholder="输入书名或作者名" />
+        <icon wx:if="{{value.length===0}}" class="icon-search" type="search" size="20" color="#6d6d6d" />
+        <icon wx:else bind:tap="clearValue" class="icon-clear" type="clear" size="20" color="#6d6d6d" />
+    </view>
+    <view class="keys-about" wx:if="{{books.length===0}}">
+        <view class="keywords">
+            <view class="flex keywords-top jc-between">
+                <view class="">大家都在搜</view>
+                <view class="icon-main" bind:tap="changeShow">
+                    <image class="icon" src="../../assets/images/reload.png" />
+                    换一换
+                </view>
+            </view>
+            <view class="flex hotwords-box">
+                <view class="hotwords" style="background:{{item.color}}" wx:for="{{showList}}" data-id="{{item.book}}" bind:tap="goToDetail">
+                    {{item.word}}
+                </view>
+            </view>
+        </view>
+        <view wx:if="{{histories.length>0}}">
+            <mp-dialog title="提示" show="{{dialogShow}}" bindbuttontap="tapDialogButton" buttons="{{buttons}}">
+                <view>是否删除</view>
+            </mp-dialog>
+            <view class="flex jc-between">
+                <view class="">搜索历史</view>
+                <view class="icon-main" bind:tap="openConfirm">
+                    <image class="icon" src="../../assets/images/clear.png" />
+                    清空
+                </view>
+            </view>
+            <view class="flex">
+                <view class="history" wx:for="{{histories}}" wx:key="index" data-value="{{item}}" bind:tap="changeValue">
+                    {{item}}
+                </view>
+            </view>
+        </view>
+    </view>
+    <scroll-view scroll-y class="results" bindscrolltolower='pullUp' wx:else>
+        <bookBox wx:for="{{books}}" wx:key="index" bookData="{{item}}"></bookBox>
+    </scroll-view>
+</view>

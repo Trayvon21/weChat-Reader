@@ -1,0 +1,16 @@
+<view class="box-container flex" bind:tap="goTo">
+    <view class="left">
+        <image class="img" lazy-load="{{true}}" src="https://statics.zhuishushenqi.com{{bookData.cover}}" />
+    </view>
+    <view class="right">
+        <view class="title">{{bookData.title}}</view>
+        <view class="author">{{bookData.author}}</view>
+        <view class="shortIntro">{{bookData.shortIntro}}</view>
+        <view class="flex tags" wx:if="{{bookData.tags}}">
+            <view class="tag" style="background:{{tagColor[index%4]}}" wx:for="{{bookData.tags}}" wx:key="index">
+                {{item}}
+            </view>
+        </view>
+        <view wx:else class="follower">最近收藏：{{bookData.latelyFollower}}</view>
+    </view>
+</view>

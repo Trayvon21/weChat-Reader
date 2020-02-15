@@ -1,0 +1,61 @@
+<view class="preview" wx:if="{{previewImage}}" bind:tap="preview">
+    <image  bind:longpress="show" class="full-pic" src="https://statics.zhuishushenqi.com{{bookInfo.cover}}" />
+</view>
+<view class="top-bg">
+    <image bind:tap="preview" class="book-cover" src="https://statics.zhuishushenqi.com{{bookInfo.cover}}" />
+    <mp-actionSheet bindactiontap="btnClick" show="{{showActionsheet}}" actions="{{groups}}" title="图片将保存至本地"></mp-actionSheet>
+</view>
+<view class="main-bg t-center">
+    <view class="title">{{bookInfo.title}}</view>
+    <view class="author">{{bookInfo.author}}</view>
+    <view class="flex jc-around btn-group">
+        <button bind:tap="goToRead" class="btn-left">开始阅读</button>
+        <button wx:if="{{!flag}}" bind:tap="addBookCase" class="btn-right">加入书架</button>
+        <button wx:else bind:tap="delBookCase" class="btn-right">移出书架</button>
+    </view>
+</view>
+<view class="bottom-bg">
+    <view class="star flex">
+        <view wx:for="{{5}}" wx:key="index">
+            <image wx:if="{{star> index}}" class="star-pic" src="../../assets/images/star-show.png" />
+            <image wx:else class="star-pic" src="../../assets/images/star-hide.png" />
+        </view>
+    </view>
+    <view class="update t-center">
+        更新至
+        <text>{{bookInfo.lastChapter}}</text>
+    </view>
+    <view class="bottom-desc m-auto">
+        <view class="bottom-nav flex t-center">
+            <view data-active='1' bind:tap='changeActive'>
+                <text class="{{actived==='1'?'border-red':''}}">详情</text>
+            </view>
+            <view data-active='2' bind:tap='changeActive'>
+                <text class="{{actived==='2'?'border-red':''}}">评价({{total}})</text>
+            </view>
+        </view>
+        <view wx:if="{{actived==='1'}}" class="desc-main">
+            <view class="longIntro">
+                简介：
+                <text>{{bookInfo.longIntro}}</text>
+            </view>
+            <view class="t-center menu">总目录({{bookInfo.chaptersCount}}章)</view>
+            <view class="readmore flex jc-between">
+                <view class="">看过这本书的人还在看</view>
+                <view class="reload-main" bind:tap="getBooks">
+                    <image class="reload" src="../../assets/images/reload.png" />
+                    换一换
+                </view>
+            </view>
+            <view class="flex jc-between readmore-margin">
+                <view wx:for="{{readMore}}" wx:key="index" data-id="{{item._id}}" bind:tap="goToDetail" class="readmore-desc">
+                    <image class="readmore-pic" src="https://statics.zhuishushenqi.com{{item.cover}}" />
+                    <view class="readmore-title t-center">{{item.title}}</view>
+                </view>
+            </view>
+        </view>
+        <scroll-view scroll-y bindscrolltolower='pullUp' wx:if="{{actived==='2'}}" class="desc-main">
+            <shortReviews wx:for="{{shortReviews}}" wx:key="index" item="{{item}}" index="{{index}}"></shortReviews>
+        </scroll-view>
+    </view>
+</view>

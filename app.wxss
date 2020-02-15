@@ -1,0 +1,24 @@
+/* 弹性盒子 */
+.flex {
+    display: flex;
+}
+
+.t-center {
+    text-align: center;
+}
+
+.v-middle {
+    vertical-align: middle;
+}
+
+.jc-between {
+    justify-content: space-between;
+}
+
+.jc-around {
+    justify-content: space-around;
+}
+
+.m-auto {
+    margin: 0 auto;
+}

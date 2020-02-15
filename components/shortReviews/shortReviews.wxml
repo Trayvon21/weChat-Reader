@@ -1,0 +1,12 @@
+<view class="flex box-container">
+    <view class="left">
+        <image class="author-pic" src="https://statics.zhuishushenqi.com{{item.author.avatar}}" />
+    </view>
+    <view class="right">
+        <view class="flex jc-between">
+            <view class="nickname">{{item.author.nickname}}</view>
+            <view class="up">{{index+1}}楼</view>
+        </view>
+        <view class="content">{{item.content}}</view>
+    </view>
+</view>
