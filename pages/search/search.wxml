@@ -1,8 +1,10 @@
 <view class="search-container">
     <view class="search-group">
-        <input confirm-type="search" value='{{value}}' bindconfirm="searchGo" bindinput="input" class="search-box t-center" placeholder-class="search-placeholder t-center" type="text" placeholder="输入书名或作者名" />
+        <input confirm-type="search" value='{{value}}' bindconfirm="searchGo" bindinput="input" class="search-box t-center {{value.length!==0?'change-width':''}}" placeholder-class="search-placeholder t-center" type="text" placeholder="输入书名或作者名" />
         <icon wx:if="{{value.length===0}}" class="icon-search" type="search" size="20" color="#6d6d6d" />
-        <icon wx:else bind:tap="clearValue" class="icon-clear" type="clear" size="20" color="#6d6d6d" />
+        <view wx:else class="clear-box" bind:tap="clearValue">
+            <image class="icon-clear" src="../../assets/images/del.png" />
+        </view>
     </view>
     <view class="keys-about" wx:if="{{books.length===0}}">
         <view class="keywords">

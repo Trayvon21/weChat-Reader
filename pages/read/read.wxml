@@ -10,9 +10,9 @@
         </view>
     </view>
 </view>
-<view class="read-container" style="background:{{bgColor}}">
+<view wx:if="{{chapters.length>0}}" class="read-container" style="background:{{bgColor}}">
     <view>
-        <view class="title">{{title}}</view>
+        <view class="title" bind:tap="backDetil">{{title}}</view>
         <view class="desc" style="font-size:{{descSize}}rpx" bind:tap="showBottom">
             <template is="wxParse" data="{{wxParseData:article.nodes}}" />
         </view>

@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "bookCase":"../../components/bookCase/bookCase"
+    "bookCase":"../../components/bookCase/bookCase",
+    "mp-dialog": "../../components/weui/dialog/dialog"
   }
 }

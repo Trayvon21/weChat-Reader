@@ -14,12 +14,22 @@
     margin-top: -20rpx;
 }
 
-.icon-clear {
-    z-index: 10;
+.clear-box {
+    z-index: 99;
     position: absolute;
-    top: 3.5vh;
-    margin-top: -20rpx;
-    right: 30rpx;
+    height: 7vh;
+    width: 7vh;
+    right: 20rpx;
+    top: 0;
+}
+.change-width{
+    width:88%;
+}
+.icon-clear {
+    margin: 1vh;
+    width: 5vh;
+    height: 5vh;
+    vertical-align: middle;
 }
 
 .search-box {

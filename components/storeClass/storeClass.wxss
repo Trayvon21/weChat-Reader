@@ -4,11 +4,17 @@
     line-height: 3;
     color: gray;
 }
-.flex{
+
+.flex {
     flex-wrap: wrap;
+    flex: 3;
 }
+
 .box {
-    width: 248rpx;
+    width: 33%;
+}
+
+.box-each {
     text-align: center;
     border: 1rpx solid rgb(244, 244, 244);
     padding: 20rpx 0;

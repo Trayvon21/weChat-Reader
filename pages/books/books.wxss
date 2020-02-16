@@ -1,9 +1,10 @@
 .books-top {
     position: fixed;
-    top:0;
+    top: 0;
     width: 100%;
     background: white;
 }
+
 .nav-box {
     width: 100%;
     border-bottom: 1rpx solid rgb(244, 244, 244);
@@ -22,9 +23,15 @@
 .nav-actived {
     color: red;
 }
-.box-height1{
+
+.box-height1 {
     margin-top: 160rpx;
 }
-.box-height2{
+
+.box-height2 {
     margin-top: 80rpx;
+}
+
+.err-msg {
+    margin-top: 200rpx;
 }

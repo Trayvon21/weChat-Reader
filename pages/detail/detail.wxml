@@ -39,7 +39,7 @@
                 简介：
                 <text>{{bookInfo.longIntro}}</text>
             </view>
-            <view class="t-center menu">总目录({{bookInfo.chaptersCount}}章)</view>
+            <view class="t-center menu" bind:tap="goToMenu">总目录({{bookInfo.chaptersCount}}章)</view>
             <view class="readmore flex jc-between">
                 <view class="">看过这本书的人还在看</view>
                 <view class="reload-main" bind:tap="getBooks">

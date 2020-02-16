@@ -1,14 +1,18 @@
 .header-nav {
     width: 250rpx;
     height: 7vh;
-    line-height: 75rpx;
+    line-height: 7vh;
     background: #f6f6f6;
+}
+
+.nav-box {
+    height: 7vh;
 }
 
 .nav-actived {
     display: inline-block;
     color: red;
-    border-bottom: 5rpx solid red;
+    border-bottom: 1rpx solid red;
 }
 
 .nav-none {

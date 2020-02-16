@@ -1,14 +1,16 @@
-<view class="flex nav-box">
-    <view bind:tap="clickNav" data-active="{{item}}" wx:for="{{navList}}" wx:key="index" class="header-nav t-center">
-        <view class="{{actived===item?'nav-actived':'nav-none'}}">{{item}}</view>
+<view wx:if="{{rankList}}">
+    <view class="flex nav-box">
+        <view bind:tap="clickNav" data-active="{{item}}" wx:for="{{navList}}" wx:key="index" class="header-nav t-center">
+            <view class="{{actived===item?'nav-actived':'nav-none'}}">{{item}}</view>
+        </view>
     </view>
-</view>
-<view wx:if="{{actived==='分类'}}" class="store-main">
-    <storeClass list="{{classList.male}}" mins="{{mins.male}}" title='男生'></storeClass>
-    <storeClass list="{{classList.female}}" mins="{{mins.female}}" title='女生'></storeClass>
-    <storeClass list="{{classList.press}}" mins="{{mins.press}}" title='出版'></storeClass>
-</view>
-<view wx:if="{{actived==='排行'}}" class="store-main">
-    <storeRank list="{{rankList.male}}" title='男生'></storeRank>
-    <storeRank list="{{rankList.female}}" title='女生'></storeRank>
+    <view wx:if="{{actived==='分类'}}" class="store-main">
+        <storeClass list="{{classList.male}}" mins="{{mins.male}}" title='男生'></storeClass>
+        <storeClass list="{{classList.female}}" mins="{{mins.female}}" title='女生'></storeClass>
+        <storeClass list="{{classList.press}}" mins="{{mins.press}}" title='出版'></storeClass>
+    </view>
+    <view wx:if="{{actived==='排行'}}" class="store-main">
+        <storeRank list="{{rankList.male}}" title='男生'></storeRank>
+        <storeRank list="{{rankList.female}}" title='女生'></storeRank>
+    </view>
 </view>

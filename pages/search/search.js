@@ -21,15 +21,24 @@ Page({
       dialogShow: true
     })
   },
-  tapDialogButton() {
-    wx.removeStorageSync("histories");
-    this.setData({
-      histories: []
-    })
-    this.setData({
-      dialogShow: false,
-      showOneButtonDialog: false
-    })
+  tapDialogButton(e) {
+    if (e.detail.item.text === "确定") {
+      wx.removeStorageSync("histories");
+      this.setData({
+        histories: [],
+        dialogShow: false
+      })
+      wx.showToast({
+        title: '删除成功',
+        icon: 'none',
+        duration: 1500
+      });
+    } else {
+      this.setData({
+        dialogShow: false,
+      })
+    }
+
   },
   input(e) {
     this.setData({

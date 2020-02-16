@@ -5,7 +5,7 @@
             <view class="{{actived.type===item.id?'nav-actived':'nav-none'}}">{{item.name}}</view>
         </view>
     </view>
-    <view class="flex nav-box"  wx:if="{{navList2.length>1}}">
+    <view class="flex nav-box" wx:if="{{navList2.length>1}}">
         <view bind:tap="clickNavBottom" data-active="{{item}}" wx:for="{{navList2}}" wx:key="index" class="header-nav t-center">
             <view class="{{actived.minor===item?'nav-actived':'nav-none'}}">{{item}}</view>
         </view>
@@ -14,4 +14,5 @@
 <!-- 书本盒子 -->
 <view class="{{navList2.length>1?'box-height1':'box-height2'}}">
     <bookBox wx:for="{{dataList}}" wx:key="index" bookData="{{item}}"></bookBox>
+    <view class="t-center err-msg" wx:if="{{dataList.length===0}}">看什么看，这里没有数据，我也没办法！</view>
 </view>

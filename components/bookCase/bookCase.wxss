@@ -1,18 +1,24 @@
 .box {
-    width: 200rpx;
-    margin: 25rpx;
+  width: 200rpx;
+  margin: 25rpx;
 }
 
 .pic {
-    width: 200rpx;
-    height: 300rpx;
+  width: 200rpx;
+  height: 300rpx;
 }
 
 .title {
-    font-size: 34rpx;
+  font-size: 34rpx;
+  line-height: 40rpx;
+  height: 80rpx;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .readInfo {
-    font-size: 32rpx;
-    color: #878787;
+  font-size: 32rpx;
+  color: #878787;
 }

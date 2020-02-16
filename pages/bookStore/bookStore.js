@@ -43,7 +43,6 @@ Page({
       if (res1.ok) {
         api.getMinor().then(res2 => {
           if (res2.ok) {
-
             api.rankCategory().then(res => {
               if (res.ok) {
                 this.setData({

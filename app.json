@@ -13,7 +13,8 @@
         "backgroundTextStyle": "light",
         "navigationBarBackgroundColor": "#c4192f",
         "navigationBarTitleText": "长江阅读",
-        "navigationBarTextStyle": "white"
+        "navigationBarTextStyle": "white",
+        "onReachBottomDistance": 0
     },
     "tabBar": {
         "color": "#8a8a8a",

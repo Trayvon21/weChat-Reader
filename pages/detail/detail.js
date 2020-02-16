@@ -126,6 +126,15 @@ create.Page(store, {
       url: `/pages/read/read?id=${this.data.bookInfo._id}&name=${this.data.bookInfo.title}&readInfo=${readInfo}`,
     });
   },
+  goToMenu() {
+    let arr = ['这个功能，就是不想做', '功能开发中', '下辈子就开发好了', '求你别点']
+    let title = arr[Math.ceil(arr.length * Math.random()) - 1]
+    wx.showToast({
+      title: title,
+      icon: 'none',
+      duration: 1500
+    });
+  },
   addBookCase() {
     let arr = this.data.books
     let temp = this.data.bookInfo

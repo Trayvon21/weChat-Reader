@@ -1,7 +1,9 @@
 <view class="title">{{title}}</view>
 <view class="flex">
     <view class="box" wx:for="{{list}}" wx:key="index" bind:tap="goTo" data-name="{{item.name}}">
-        <view class="book-name">{{item.name}}</view>
-        <view class="book-count">{{item.bookCount}}本</view>
+        <view class="box-each">
+            <view class="book-name">{{item.name}}</view>
+            <view class="book-count">{{item.bookCount}}本</view>
+        </view>
     </view>
 </view>

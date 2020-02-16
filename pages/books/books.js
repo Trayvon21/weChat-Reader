@@ -153,9 +153,6 @@ Page({
       actived.start = actived.start + 20
       api.getCatsBooks(actived).then(res => {
         if (res.ok) {
-          res.books.map(item => {
-            item.cover = "https://statics.zhuishushenqi.com" + item.cover
-          })
           let dataList = this.data.dataList
           this.setData({
             dataList: dataList.concat(res.books)

@@ -8,12 +8,15 @@
         <image bind:tap="reload" class="header-icon" src="../../assets/images/reload.svg" />
     </view>
 </view>
+<mp-dialog title="提示" show="{{dialogShow}}" bindbuttontap="del" buttons="{{buttons}}">
+    <view>是否删除</view>
+</mp-dialog>
 <view wx:if="{{books.length>0}}" class="flex book-boxs">
     <view class="books" wx:for="{{books}}" wx:key="index">
-        <icon wx:if="{{editFlag}}" bind:tap="del" data-id="{{item._id}}" class="del-icon" type="clear" size="23" color="" />
-        <view animation="{{animation}}">
-            <bookCase item="{{item}}"></bookCase>
+        <icon wx:if="{{editFlag}}" bind:tap="openDialog" data-id="{{item._id}}" class="del-icon" type="clear" size="23" color="" />
+        <view style="{{editFlag?'':'transform: rotate(0deg)!important;-webkit-transform: rotate(0deg)!important;'}}" animation="{{animation}}">
+            <bookCase item="{{item}}" readInfo="{{item.readInfo}}"></bookCase>
         </view>
     </view>
 </view>
-<view wx:else class="">主人还没收藏书籍哦，请去书城收藏吧！</view>
+<view wx:else class="t-center msg">主人还没收藏书籍哦，请去书城收藏吧！</view>
