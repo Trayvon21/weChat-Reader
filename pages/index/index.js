@@ -120,11 +120,17 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    JSON.parse(wx.getStorageSync('books')).length > 0 ? this.setData({
-      books: JSON.parse(wx.getStorageSync('books'))
-    }) : this.setData({
-      editFlag: true
-    })
+    if (wx.getStorageSync('books')) {
+      JSON.parse(wx.getStorageSync('books')).length > 0 ? this.setData({
+        books: JSON.parse(wx.getStorageSync('books'))
+      }) : this.setData({
+        editFlag: true
+      })
+    } else {
+      this.setData({
+        editFlag: true
+      })
+    }
 
   },
 
